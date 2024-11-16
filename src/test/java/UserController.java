@@ -35,23 +35,7 @@ public class UserController extends Setup {
         Response res = given().contentType("application/json").get("/booking/" + bookId);
         System.out.println(res.asString());
     }
-    public void createBooking(UserModel model) throws ConfigurationException {
-        RestAssured.baseURI = prop.getProperty("baseUrl");
-//        model.setFirstname(model.getFirstname());
-  //      model.setLastname(model.getLastname());
-    //    model.setTotalprice(model.getTotalprice());
-     //   model.setDepositpaid(model.getDepositpaid());
-      //  model.setBookingdates(model.getBookingdates());
-       // model.setAdditionalneeds(model.getAdditionalneeds());
 
+}
 
-        Response res = given().contentType("application/json").
-               body(model).header("Authorization",prop.getProperty("token")).
-               post("/booking");
-       System.out.println(res.asString());
-
-
-    }
-
-    }
 
